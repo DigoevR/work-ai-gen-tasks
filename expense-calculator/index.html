@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Monthly Expense Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Monthly Expense Calculator</h1>
+            <form id="expense-form" onsubmit="return false;">
+                <table id="expense-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount ($)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-tbody">
+                        <tr>
+                            <td><input type="text" name="category" required /></td>
+                            <td><input type="number" name="amount" min="0" required /></td>
+                            <td><button type="button" class="remove-btn" onclick="removeRow(this)">Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" id="add-row-btn">Add Expense</button>
+                <button type="button" id="calculate-btn">Calculate</button>
+            </form>
+            <div id="results" class="results">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
